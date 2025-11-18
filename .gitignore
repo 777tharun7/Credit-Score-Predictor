@@ -1,0 +1,49 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Virtual environments
+env/
+venv/
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dylib
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/
+
+# Model/data files (do not commit large model artifacts)
+*.h5
+*.save
+*.ckpt
+*.pth
+*.pt
+*.npz
+*.zip
+
+# Flutter SDK caches and build artifacts (local SDKs)
+emo app/flutter/bin/cache/
+emo app/flutter/bin/cache/**
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temp
+*.log
+tmp/
+
+# Notebook outputs
+*.nbconvert.ipynb
+
+# Git LFS pointer files (if using LFS)
+*.gitattributes
