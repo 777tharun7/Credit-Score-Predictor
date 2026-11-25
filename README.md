@@ -38,15 +38,21 @@ The repository contains beneficiary-credit scoring notebooks, a Streamlit interf
 
 ## Run locally
 
-Use Python 3.10 as indicated by `runtime.txt`.
+### Modern Web App (FastAPI + UI/UX + Auth + ANN Inference)
 
 ```bash
-python -m venv .venv
-# Activate the environment:
-# macOS/Linux: source .venv/bin/activate
-# Windows PowerShell: .venv\Scripts\Activate.ps1
+python3 -m pip install -r requirements.txt
+python3 -m uvicorn server:app --host 127.0.0.1 --port 8000
+```
 
-python -m pip install -r requirements.txt
+Then open `http://127.0.0.1:8000` in your browser.
+Demo accounts:
+- Beneficiary: `demo@creovate.ai` / `Creovate@2026`
+- Lending Officer: `officer@creovate.ai` / `Officer@2026`
+
+### Legacy Streamlit Prototype
+
+```bash
 streamlit run app.py
 ```
 

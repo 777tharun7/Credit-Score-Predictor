@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creovate — AI Beneficiary Credit Score Predictor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Top Educational Prototype Banner -->
+  <div class="top-notice" role="region" aria-label="Prototype Notice">
+    <span>Educational &amp; Research Prototype — Outputs are for academic demonstration only, not real lending decisions.</span>
+    <a href="#rules" data-nav="rules">Read Website Rules &rarr;</a>
+  </div>
+
+  <!-- Sticky Navigation -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="brand" data-nav="home">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span class="brand-text">
+          <strong>Creovate</strong>
+          <small>Credit Intelligence</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link active" data-nav="home">Home</a>
+        <a href="#about" class="nav-link" data-nav="about">About</a>
+        <a href="#models" class="nav-link" data-nav="models">Models</a>
+        <a href="#rules" class="nav-link" data-nav="rules">Website Rules</a>
+        <a href="#team" class="nav-link" data-nav="team">Team</a>
+        <a href="#predictor" class="nav-link nav-predictor" data-nav="predictor">
+          <span class="lock-dot" id="predictor-lock-dot" title="Sign in required"></span>
+          Predictor
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle Dark/Light Theme">
+          <span id="theme-icon">&#9788;</span>
+        </button>
+        <div id="auth-nav-slot">
+          <a href="#login" class="btn btn-primary btn-sm" data-nav="login">Sign In</a>
+        </div>
+        <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+          &#9776;
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <!-- ==================== HOME VIEW ==================== -->
+    <section id="view-home" class="view active" aria-labelledby="home-title">
+      <div class="hero">
+        <div class="hero-copy">
+          <div class="status-pill">
+            <span class="pulse-dot"></span>
+            <span id="hero-model-status">ANN Model Ready &bull; 20,000 Records</span>
+          </div>
+          <h1 id="home-title">Fair, Transparent <span class="gradient-text">Beneficiary Credit Scoring</span></h1>
+          <p class="hero-subtitle">
+            An AI-driven credit scoring system with an integrated income-verification layer designed for direct digital welfare lending. Powered by a 4-layer Artificial Neural Network trained on 20,000 beneficiary profiles.
+          </p>
+          <div class="hero-cta">
+            <a href="#predictor" class="btn btn-primary btn-lg" data-nav="predictor">Launch Credit Predictor</a>
+            <a href="#rules" class="btn btn-outline btn-lg" data-nav="rules">Review Website Rules</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <strong>91.5%</strong>
+              <span>ANN Accuracy</span>
+            </div>
+            <div class="stat-item">
+              <strong>0.94</strong>
+              <span>ROC-AUC</span>
+            </div>
+            <div class="stat-item">
+              <strong>20,000</strong>
+              <span>Beneficiary Records</span>
+            </div>
+            <div class="stat-item">
+              <strong>8 Signals</strong>
+              <span>Financial &amp; Demographic</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="preview-card">
+            <div class="preview-header">
+              <span>Live Model Preview</span>
+              <span class="badge badge-success">ANN Engine</span>
+            </div>
+            <div class="preview-score-ring">
+              <div class="ring-value">742</div>
+              <div class="ring-label">Good Credit Tier</div>
+            </div>
+            <div class="preview-bars">
+              <div class="bar-row">
+                <span>Repayment Score</span>
+                <div class="bar-track"><div class="bar-fill" style="width: 86%"></div></div>
+                <strong>+48.2</strong>
+              </div>
+              <div class="bar-row">
+                <span>Annual Income</span>
+                <div class="bar-track"><div class="bar-fill" style="width: 72%"></div></div>
+                <strong>+24.6</strong>
+              </div>
+              <div class="bar-row">
+                <span>Property Value</span>
+                <div class="bar-track"><div class="bar-fill" style="width: 64%"></div></div>
+                <strong>+15.1</strong>
+              </div>
+              <div class="bar-row">
+                <span>Loan Burden</span>
+                <div class="bar-track"><div class="bar-fill warn" style="width: 38%"></div></div>
+                <strong>-11.4</strong>
+              </div>
+            </div>
+            <div class="preview-footer">
+              <span>Threshold: <strong id="home-threshold">619.0</strong></span>
+              <a href="#login" data-nav="login">Sign in to test your profile &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h2>Core Platform Capabilities</h2>
+        <p>Built for clarity, accountability, and rapid beneficiary evaluation.</p>
+      </div>
+      <div class="grid-4">
+        <article class="card feature-card">
+          <div class="feature-icon">&#129504;</div>
+          <h3>Deep Learning ANN</h3>
+          <p>Runs the trained <code>ann_credit_score.h5</code> 4-layer neural network with Batch Normalization and StandardScaler preprocessing.</p>
+        </article>
+        <article class="card feature-card">
+          <div class="feature-icon">&#128269;</div>
+          <h3>Income Verification Layer</h3>
+          <p>Computes Loan-to-Income and Loan-to-Property ratios alongside document validity checks to flag discrepancies.</p>
+        </article>
+        <article class="card feature-card">
+          <div class="feature-icon">&#128202;</div>
+          <h3>Explainable Factor Impact</h3>
+          <p>Shows how each of the 8 model inputs shifted the predicted score relative to the dataset median baseline.</p>
+        </article>
+        <article class="card feature-card">
+          <div class="feature-icon">&#128274;</div>
+          <h3>Authenticated Access &amp; Rules</h3>
+          <p>Protected prediction workspace with PBKDF2 password hashing, session tokens, and transparent governance rules.</p>
+        </article>
+      </div>
+
+      <div class="card workflow-banner">
+        <div class="section-header compact">
+          <h2>How It Works</h2>
+          <p>Three simple steps to run an assessment.</p>
+        </div>
+        <div class="grid-3">
+          <div class="step-box">
+            <span class="step-num">01</span>
+            <h3>Review Website Rules</h3>
+            <p>Read the privacy, responsible AI, and verification rules in our <a href="#rules" data-nav="rules">Rules Center</a>.</p>
+          </div>
+          <div class="step-box">
+            <span class="step-num">02</span>
+            <h3>Sign In or Use Demo</h3>
+            <p>Create an account or use one-click Demo Beneficiary / Officer credentials on the <a href="#login" data-nav="login">Login Page</a>.</p>
+          </div>
+          <div class="step-box">
+            <span class="step-num">03</span>
+            <h3>Predict &amp; Inspect</h3>
+            <p>Enter applicant metrics or load a sample preset in the <a href="#predictor" data-nav="predictor">Predictor</a> to get live ANN scores.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT & RESEARCH VIEW ==================== -->
+    <section id="view-about" class="view" aria-labelledby="about-title">
+      <div class="page-head">
+        <h1 id="about-title">About &amp; Research Report</h1>
+        <p>AI-Driven Beneficiary Credit Scoring System with Income Verification Layer for Direct Digital Lending (Creovate).</p>
+      </div>
+
+      <div class="about-layout">
+        <aside class="card about-sidebar" aria-label="Research Chapters">
+          <h3>Report Sections</h3>
+          <div id="about-nav-list" class="about-nav-list"></div>
+        </aside>
+        <article class="card about-content" id="about-content-panel">
+          <!-- Populated by JS -->
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== MODELS VIEW ==================== -->
+    <section id="view-models" class="view" aria-labelledby="models-title">
+      <div class="page-head">
+        <h1 id="models-title">Model Architecture &amp; Benchmarks</h1>
+        <p>Seven machine learning and deep learning models were evaluated. The 4-layer ANN achieved the strongest overall performance and powers the live predictor.</p>
+      </div>
+
+      <div class="card architecture-card">
+        <h3>Deployed ANN Architecture (<code>ann_credit_score.h5</code>)</h3>
+        <div class="arch-flow">
+          <div class="arch-node"><strong>Input Layer</strong><span>8 Standardized Features</span></div>
+          <span class="arch-arrow">&rarr;</span>
+          <div class="arch-node"><strong>Dense (128)</strong><span>ReLU + BatchNorm + Dropout(0.3)</span></div>
+          <span class="arch-arrow">&rarr;</span>
+          <div class="arch-node"><strong>Dense (64)</strong><span>ReLU + BatchNorm + Dropout(0.2)</span></div>
+          <span class="arch-arrow">&rarr;</span>
+          <div class="arch-node"><strong>Dense (32)</strong><span>ReLU</span></div>
+          <span class="arch-arrow">&rarr;</span>
+          <div class="arch-node highlight"><strong>Output (1)</strong><span>Linear Credit Score</span></div>
+        </div>
+      </div>
+
+      <div class="grid-2 models-grid" id="models-grid">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- ==================== WEBSITE RULES VIEW ==================== -->
+    <section id="view-rules" class="view" aria-labelledby="rules-title">
+      <div class="page-head">
+        <h1 id="rules-title">Website Rules, Policies &amp; Governance</h1>
+        <p>All users, lending officers, and researchers must follow these platform rules when using Creovate.</p>
+      </div>
+
+      <div class="card rules-consent-bar">
+        <div>
+          <h3>Platform Rules Acknowledgement</h3>
+          <p id="rules-status-text">Confirm that you have read and understood the educational, privacy, and verification rules below.</p>
+        </div>
+        <button type="button" class="btn btn-primary" id="acknowledge-rules-btn">Acknowledge Rules</button>
+      </div>
+
+      <div class="grid-2">
+        <article class="card rule-card">
+          <span class="rule-tag">Rule 01 &bull; Scope</span>
+          <h3>Educational &amp; Non-Lending Prototype</h3>
+          <ul>
+            <li>This application is an academic and research prototype built for demonstration.</li>
+            <li>Predicted credit scores and eligibility flags <strong>must not</strong> be used to approve, reject, price, or deny real-world credit or welfare benefits.</li>
+            <li>The eligibility threshold is derived dynamically from the dataset median (<code>~619</code>).</li>
+          </ul>
+        </article>
+
+        <article class="card rule-card">
+          <span class="rule-tag">Rule 02 &bull; Access &amp; Auth</span>
+          <h3>Authentication &amp; Account Security</h3>
+          <ul>
+            <li>Access to the live Credit Score Predictor requires an authenticated session.</li>
+            <li>Passwords must be at least 8 characters and are hashed using PBKDF2-HMAC-SHA256 with per-user salts.</li>
+            <li>Do not share personal credentials; use the provided Demo accounts for quick evaluation.</li>
+          </ul>
+        </article>
+
+        <article class="card rule-card">
+          <span class="rule-tag">Rule 03 &bull; Privacy</span>
+          <h3>Data Privacy &amp; PII Protection</h3>
+          <ul>
+            <li><strong>Never</strong> upload real applicant Aadhaar numbers, bank statements, government IDs, or private financial records.</li>
+            <li>Uploaded applicant images are previewed locally in your browser and are not stored on any external server.</li>
+            <li>Assessment history is scoped strictly to the signed-in user account.</li>
+          </ul>
+        </article>
+
+        <article class="card rule-card">
+          <span class="rule-tag">Rule 04 &bull; Verification</span>
+          <h3>Income &amp; Document Verification Rules</h3>
+          <ul>
+            <li>Combined declared income sums <code>annual_income</code>, <code>joint_income</code>, and <code>business_income</code>.</li>
+            <li>If <strong>Document Validity</strong> is <code>Expired</code> or <code>Not Provided</code>, or <strong>ID Verified</strong> is <code>No</code>, the assessment is automatically flagged for manual review.</li>
+            <li>Loan-to-Income ratios exceeding <code>5.0x</code> trigger an automatic affordability warning.</li>
+          </ul>
+        </article>
+
+        <article class="card rule-card">
+          <span class="rule-tag">Rule 05 &bull; Fairness</span>
+          <h3>Algorithmic Fairness &amp; Transparency</h3>
+          <ul>
+            <li>Sensitive identity attributes (<code>name</code>, <code>gender</code>, <code>region</code>, <code>user_id</code>) are excluded from the ANN inference vector.</li>
+            <li>Every prediction includes a per-feature impact breakdown so decisions remain auditable and explainable.</li>
+            <li>Human-in-the-loop review is mandatory whenever verification flags are raised.</li>
+          </ul>
+        </article>
+
+        <article class="card rule-card">
+          <span class="rule-tag">Rule 06 &bull; Acceptable Use</span>
+          <h3>Input Validation &amp; Responsible Conduct</h3>
+          <ul>
+            <li>All numeric inputs must be non-negative; age must be between 18 and 100, and repayment score between 0 and 1000.</li>
+            <li>Automated scraping, brute-force login attempts, or tampering with model artifacts is prohibited.</li>
+            <li>Report any unexpected model behavior or data anomalies to the Creovate team.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== TEAM VIEW ==================== -->
+    <section id="view-team" class="view" aria-labelledby="team-title">
+      <div class="page-head">
+        <h1 id="team-title">Creovate Research &amp; Engineering Team</h1>
+        <p>The team behind the Beneficiary Credit Scoring &amp; Income Verification prototype.</p>
+      </div>
+      <div class="grid-4" id="team-grid">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- ==================== LOGIN / REGISTER VIEW ==================== -->
+    <section id="view-login" class="view" aria-labelledby="login-title">
+      <div class="auth-wrapper">
+        <div class="card auth-card">
+          <div class="auth-tabs" role="tablist">
+            <button type="button" class="auth-tab active" id="tab-signin" role="tab" aria-selected="true">Sign In</button>
+            <button type="button" class="auth-tab" id="tab-register" role="tab" aria-selected="false">Create Account</button>
+          </div>
+
+          <h1 id="login-title" class="auth-heading">Welcome back</h1>
+          <p class="auth-sub" id="auth-subtext">Sign in to access the live ANN Credit Score Predictor and assessment history.</p>
+
+          <div id="auth-error" class="alert alert-error hidden" role="alert"></div>
+
+          <!-- Sign In Form -->
+          <form id="signin-form" novalidate>
+            <div class="field">
+              <label for="signin-email">Email Address</label>
+              <input id="signin-email" type="email" autocomplete="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+              <label for="signin-password">Password</label>
+              <div class="password-wrap">
+                <input id="signin-password" type="password" autocomplete="current-password" placeholder="Enter your password" required />
+                <button type="button" class="toggle-pw" data-target="signin-password" aria-label="Show password">Show</button>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+          </form>
+
+          <!-- Register Form -->
+          <form id="register-form" class="hidden" novalidate>
+            <div class="field">
+              <label for="reg-name">Full Name</label>
+              <input id="reg-name" type="text" autocomplete="name" placeholder="e.g. Aarohi Patel" required minlength="2" />
+            </div>
+            <div class="field">
+              <label for="reg-email">Email Address</label>
+              <input id="reg-email" type="email" autocomplete="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+              <label for="reg-role">Account Role</label>
+              <select id="reg-role">
+                <option value="Beneficiary">Beneficiary</option>
+                <option value="Lending Officer">Lending Officer</option>
+                <option value="Researcher">Researcher</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="reg-password">Password (min 8 characters)</label>
+              <div class="password-wrap">
+                <input id="reg-password" type="password" autocomplete="new-password" placeholder="Create a strong password" required minlength="8" />
+                <button type="button" class="toggle-pw" data-target="reg-password" aria-label="Show password">Show</button>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+          </form>
+
+          <div class="demo-divider"><span>Instant Demo Access</span></div>
+          <div class="demo-buttons">
+            <button type="button" class="btn btn-outline btn-sm" id="demo-beneficiary-btn">Demo Beneficiary</button>
+            <button type="button" class="btn btn-outline btn-sm" id="demo-officer-btn">Demo Lending Officer</button>
+          </div>
+          <p class="auth-footnote">
+            By signing in, you agree to abide by the <a href="#rules" data-nav="rules">Creovate Website Rules</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PREDICTOR WORKSPACE VIEW ==================== -->
+    <section id="view-predictor" class="view" aria-labelledby="predictor-title">
+      <div id="predictor-auth-gate" class="card auth-gate hidden">
+        <div class="gate-icon">&#128274;</div>
+        <h2>Sign In Required</h2>
+        <p>To protect model integrity and track your assessment history, please sign in before running credit score predictions.</p>
+        <div class="hero-cta">
+          <a href="#login" class="btn btn-primary" data-nav="login">Go to Sign In</a>
+          <button type="button" class="btn btn-outline" id="gate-demo-btn">Quick Demo Login</button>
+        </div>
+      </div>
+
+      <div id="predictor-workspace" class="hidden">
+        <div class="predictor-header">
+          <div>
+            <h1 id="predictor-title">Credit Score Predictor</h1>
+            <p>Live inference powered by <code>ann_credit_score.h5</code> &bull; Eligibility threshold: <strong id="pred-threshold-label">619.00</strong></p>
+          </div>
+          <div class="preset-bar" id="preset-bar">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <div class="predictor-grid">
+          <!-- Left: Input Form -->
+          <form id="predict-form" class="card predictor-form-card" novalidate>
+            <div class="form-section-title">
+              <h3>1. Applicant &amp; Document Profile</h3>
+              <span class="helper-chip">Excluded from ANN vector (Fairness Rule)</span>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="field">
+                <label for="p-name">Applicant Name</label>
+                <input id="p-name" type="text" value="Aarohi Patel" required />
+              </div>
+              <div class="field">
+                <label for="p-gender">Gender</label>
+                <select id="p-gender">
+                  <option value="Female">Female</option>
+                  <option value="Male">Male</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="p-region">Region</label>
+                <input id="p-region" type="text" value="Hyderabad" />
+              </div>
+              <div class="field">
+                <label for="p-occupation">Occupation</label>
+                <input id="p-occupation" type="text" value="Self-Employed" />
+              </div>
+              <div class="field">
+                <label for="p-id-verified">ID Verified</label>
+                <select id="p-id-verified">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="p-doc-validity">Document Validity</label>
+                <select id="p-doc-validity">
+                  <option value="Valid">Valid</option>
+                  <option value="Expired">Expired</option>
+                  <option value="Not Provided">Not Provided</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="p-image">Applicant Document / Photo Preview (Optional, local only)</label>
+              <input id="p-image" type="file" accept="image/png,image/jpeg" />
+              <div id="image-preview-box" class="image-preview-box hidden">
+                <img id="image-preview-img" alt="Applicant preview" />
+                <button type="button" class="btn btn-outline btn-sm" id="clear-image-btn">Remove</button>
+              </div>
+            </div>
+
+            <hr class="divider" />
+
+            <div class="form-section-title">
+              <h3>2. Financial &amp; Credit Signals (8 ANN Features)</h3>
+              <button type="button" class="btn-link" id="reset-medians-btn">Reset to Dataset Medians</button>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="field">
+                <label for="f-annual_income">Annual Income (&#8377;)</label>
+                <input id="f-annual_income" type="number" min="0" step="1000" required />
+              </div>
+              <div class="field">
+                <label for="f-joint_income">Joint Income (&#8377;)</label>
+                <input id="f-joint_income" type="number" min="0" step="1000" required />
+              </div>
+              <div class="field">
+                <label for="f-business_income">Business Income (&#8377;)</label>
+                <input id="f-business_income" type="number" min="0" step="1000" required />
+              </div>
+              <div class="field">
+                <label for="f-property_value">Property Value (&#8377;)</label>
+                <input id="f-property_value" type="number" min="0" step="10000" required />
+              </div>
+              <div class="field">
+                <label for="f-loan_amount">Requested Loan Amount (&#8377;)</label>
+                <input id="f-loan_amount" type="number" min="0" step="5000" required />
+              </div>
+              <div class="field">
+                <label for="f-repayment_score">Repayment Score (0–1000)</label>
+                <input id="f-repayment_score" type="number" min="0" max="1000" step="1" required />
+              </div>
+              <div class="field">
+                <label for="f-beneficiary_count">Household Beneficiaries (1–30)</label>
+                <input id="f-beneficiary_count" type="number" min="1" max="30" step="1" required />
+              </div>
+              <div class="field">
+                <label for="f-age">Applicant Age (18–100)</label>
+                <input id="f-age" type="number" min="18" max="100" step="1" required />
+              </div>
+            </div>
+
+            <div id="predict-error" class="alert alert-error hidden" role="alert"></div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-full" id="predict-submit-btn">
+              Run ANN Credit Score Prediction
+            </button>
+          </form>
+
+          <!-- Right: Results Panel -->
+          <div class="results-column">
+            <div class="card result-card" id="result-card">
+              <div class="result-placeholder" id="result-placeholder">
+                <div class="placeholder-icon">&#128200;</div>
+                <h3>Ready for Assessment</h3>
+                <p>Fill in the applicant signals or choose a sample preset, then click <strong>Run ANN Credit Score Prediction</strong>.</p>
+              </div>
+
+              <div id="result-content" class="hidden">
+                <div class="result-top">
+                  <span class="badge" id="res-tier-badge">Good</span>
+                  <span class="result-meta" id="res-applicant-label">Applicant</span>
+                </div>
+
+                <!-- SVG Gauge -->
+                <div class="gauge-wrap">
+                  <svg viewBox="0 0 220 125" class="gauge-svg" aria-label="Credit Score Gauge">
+                    <path d="M 20 110 A 90 90 0 0 1 200 110" class="gauge-bg" />
+                    <path d="M 20 110 A 90 90 0 0 1 200 110" class="gauge-arc" id="gauge-arc" />
+                  </svg>
+                  <div class="gauge-center">
+                    <div class="gauge-score" id="res-score">--</div>
+                    <div class="gauge-range">Scale: 300 – 900</div>
+                  </div>
+                </div>
+
+                <div id="res-eligibility-banner" class="eligibility-banner"></div>
+
+                <div class="verification-box">
+                  <div class="verif-head">
+                    <h4>Income &amp; Document Verification</h4>
+                    <span class="badge" id="res-verif-badge">Verified</span>
+                  </div>
+                  <div class="verif-metrics">
+                    <div>
+                      <small>Combined Income</small>
+                      <strong id="res-total-income">--</strong>
+                    </div>
+                    <div>
+                      <small>Loan / Income</small>
+                      <strong id="res-lti">--</strong>
+                    </div>
+                    <div>
+                      <small>Loan / Property</small>
+                      <strong id="res-ltp">--</strong>
+                    </div>
+                  </div>
+                  <ul id="res-verif-flags" class="verif-flags"></ul>
+                </div>
+
+                <div class="impacts-box">
+                  <h4>Feature Impact Breakdown (vs. Median)</h4>
+                  <div id="res-impacts-list" class="impacts-list"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card history-card">
+              <div class="history-head">
+                <h3>Recent Assessments</h3>
+                <button type="button" class="btn-link" id="refresh-history-btn">Refresh</button>
+              </div>
+              <div id="history-container" class="history-container">
+                <p class="muted">No assessments recorded yet in this account.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Creovate</strong> &mdash; AI Beneficiary Credit Scoring Prototype
+      </div>
+      <div class="footer-links">
+        <a href="#home" data-nav="home">Home</a>
+        <a href="#about" data-nav="about">About</a>
+        <a href="#models" data-nav="models">Models</a>
+        <a href="#rules" data-nav="rules">Website Rules</a>
+        <a href="#team" data-nav="team">Team</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

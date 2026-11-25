@@ -1,6 +1,8 @@
-streamlit
+fastapi
+uvicorn
+h5py
 numpy
 pandas
-tensorflow-cpu==2.13.0
 scikit-learn
+streamlit
 Pillow
