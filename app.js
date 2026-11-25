@@ -524,7 +524,7 @@ function loadHistory() {
 // Event Wiring
 // ---------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
-  applyTheme(localStorage.getItem(THEME_KEY) || "dark");
+  applyTheme(localStorage.getItem(THEME_KEY) || "light");
   updateAuthUI();
   renderAbout();
   renderModels();
